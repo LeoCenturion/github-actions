@@ -56,8 +56,7 @@ jobs:
         uses: actions-rs/cargo@v1.0.1
         with:
           # Cargo command to run (ex. `check` or `build`)
-          command: clippy
-          args: -D warnings
+          command: clippy -- -D warnings
           # Toolchain to use (without the `+` sign, ex. `nightly`)
           toolchain: stable
       - name: fmt
@@ -66,8 +65,7 @@ jobs:
         uses: actions-rs/cargo@v1.0.1
         with:
           # Cargo command to run (ex. `check` or `build`)
-          command: fmt
-          args: --check
+          command: fmt -- --check
           # Toolchain to use (without the `+` sign, ex. `nightly`)
           toolchain: stable
       - name: test
