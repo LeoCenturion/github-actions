@@ -67,6 +67,7 @@ jobs:
         with:
           # Cargo command to run (ex. `check` or `build`)
           command: fmt 
+          args: -- --check
           # Toolchain to use (without the `+` sign, ex. `nightly`)
           toolchain: stable
       - name: test
